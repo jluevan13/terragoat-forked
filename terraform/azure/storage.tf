@@ -55,7 +55,7 @@ resource "azurerm_storage_account" "example" {
     git_modifiers        = "Adin.Ermie/nimrodkor"
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
-    yor_trace            = "23861ff4-c42d-495e-80ac-776c74035f43"
+    yor_trace            = "2cf7d522-5452-4a6b-ad09-49549c4e3b80"
   }
 }
 
@@ -71,6 +71,9 @@ resource "azurerm_storage_account_network_rules" "test" {
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
   location = "West Europe"
+  tags = {
+    yor_trace = "25f248eb-f776-4887-9ddc-9784e9b86872"
+  }
 }
 
 resource "azurerm_storage_account" "example" {
@@ -79,6 +82,16 @@ resource "azurerm_storage_account" "example" {
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  tags = {
+    git_commit           = "5c6b5d60a8aa63a5d37e60f15185d13a967f0542"
+    git_file             = "terraform/azure/storage.tf"
+    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_by = "nimrodkor@users.noreply.github.com"
+    git_modifiers        = "Adin.Ermie/nimrodkor"
+    git_org              = "bridgecrewio"
+    git_repo             = "terragoat"
+    yor_trace            = "2cf7d522-5452-4a6b-ad09-49549c4e3b80"
+  }
 }
 
 resource "azurerm_storage_container" "example" {
