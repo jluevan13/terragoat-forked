@@ -143,6 +143,7 @@ resource "aws_vpc" "web_vpc" {
 }
 
 resource "aws_subnet" "web_subnet" {
+  # test update web_subnet
   vpc_id                  = aws_vpc.web_vpc.id
   cidr_block              = "172.16.10.0/24"
   availability_zone       = "${var.region}a"
