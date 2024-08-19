@@ -1,4 +1,5 @@
 # this comment means nothing
+# merging to branch other than main
 resource "aws_instance" "web_host" {
   # ec2 have plain text secrets in user data
   # test change
